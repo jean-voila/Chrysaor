@@ -7,7 +7,7 @@ class PegasusData():
         self.cookie  = ""
         self.name    = ""
 
-    def __GetRawData__(self, credentialFile="data/credentials", cookieFile="data/cookie", verboseOutput=True):
+    def __GetData__(self, credentialFile="data/credentials", cookieFile="data/cookie", verboseOutput=True):
         loggingData = StudentLogging.log(credentialFile, cookieFile, verboseOutput)
         self.success = bool(loggingData["success"])
         self.cookie  = loggingData["cookie"]
@@ -15,7 +15,7 @@ class PegasusData():
 
 
 studentData = PegasusData()
-studentData.__GetRawData__()
+studentData.__GetData__()
 
 
 

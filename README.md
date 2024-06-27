@@ -1,6 +1,7 @@
 ---
 
 # Chrysaor
+![](https://komarev.com/ghpvc/?username=jean-voila)
 
 Chrysaor is an unofficial Python API for accessing academic data from the *Pegasus* service provided by the *IONIS* school group. This API allows students and parents to programmatically access their grades and academic information using reverse engineering techniques, including requests (using the `requests` module) and web scraping with `BeautifulSoup`.
 

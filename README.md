@@ -1,7 +1,7 @@
 ---
 
 # Chrysaor
-![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fjean-voila%2FChrysaor&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fjean-voila%2FChrysaor&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)
 
 Chrysaor is an unofficial Python API for accessing academic data from the *Pegasus* service provided by the *IONIS* school group. This API allows students and parents to programmatically access their grades and academic information using reverse engineering techniques, including requests (using the `requests` module) and web scraping with `BeautifulSoup`.
 

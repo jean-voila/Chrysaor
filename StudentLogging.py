@@ -6,6 +6,10 @@ success = False
 baseLoginURL = "https://epita-etu.helvetius.net/pegasus/index.php" 
 baseNotesURL = "https://epita-etu.helvetius.net/pegasus/index.php?com=extract&job=extract-notes"
 
+class EmptyCredentialsError(Exception):
+    pass
+
+
 def censor(string, censorLength=4):
     return string[:censorLength] + "*" * (len(string) - censorLength)
 
@@ -41,15 +45,17 @@ def log(credentialFile, cookieFile, verboseOutput=False):
     studentName = ""
     PHPSESSIDCookie = ""
 
-    with open(credentialFile, "r") as file:
-        data = file.read().split("\n")
-        payloadWithCredentials = {
-            "login": data[0],
-            "password": data[1],
-            "job": "auth-user",
-            "com": "login"
-        }
-
+    try:
+        with open(credentialFile, "r") as file:
+            data = file.read().split("\n")
+            payloadWithCredentials = {
+                "login": data[0],
+                "password": data[1],
+                "job": "auth-user",
+                "com": "login"
+            }
+    except:
+        raise EmptyCredentialsError("❌ credentials file is empty or does not exist. please check your credentials.")
 
     with open(cookieFile, "r") as file:
         PHPSESSIDCookie = file.read()

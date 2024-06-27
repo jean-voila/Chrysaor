@@ -179,4 +179,5 @@ cython_debug/
 
 
 #DATA FOLDER
-data/
+data/cookie
+data/credentials
